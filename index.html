@@ -15,17 +15,19 @@
 		ga('linker:autoLink', ['https://davidhayneshasgithub.github.io/zauiTestGA/','http://seymour.zaui.com/dhaynes/zauitour//data/portals/test/index.php'] );
 		ga('require', 'displayfeatures');
 		ga('send', 'pageview', {'hitCallback': function() {
-		    try { 
-		      var gobj = window[window.GoogleAnalyticsObject];
-		      var iframe = document.getElementById('#zaui-embed-modal-iframe');
-		      var tracker, linker;
-		      if (gobj) {
-		        tracker = gobj.getAll()[0];
-		        linker = new window.gaplugins.Linker(tracker);
-		        iframe.src = linker.decorate(iframe.src);
-		      }
-		    } catch(e) {}
-		  }
+			return function() {
+				try {
+				var gobj = window[window.GoogleAnalyticsObject];
+				var anchor = document.getElementById('zaui-embed-modal-iframe');
+				var tracker, linker;
+				if (gobj && anchor !== null) {
+					tracker = gobj.getAll()[0];
+					linker = new window.gaplugins.Linker(tracker);
+					anchor.href = linker.decorate(anchor.href);
+					}
+				} catch(e) {}
+				}
+			}
 		});
 	</script>
 	<meta charset="UTF-8">
