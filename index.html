@@ -14,21 +14,7 @@
 		});
 		ga('linker:autoLink', ['https://davidhayneshasgithub.github.io/zauiTestGA/','http://seymour.zaui.com/dhaynes/zauitour//data/portals/test/index.php'] );
 		ga('require', 'displayfeatures');
-		ga('send', 'pageview', {'hitCallback': function() {
-			return function() {
-				try {
-				var gobj = window[window.GoogleAnalyticsObject];
-				var anchor = document.getElementById('zaui-embed-modal-iframe');
-				var tracker, linker;
-				if (gobj && anchor !== null) {
-					tracker = gobj.getAll()[0];
-					linker = new window.gaplugins.Linker(tracker);
-					anchor.href = linker.decorate(anchor.href);
-					}
-				} catch(e) {}
-				}
-			}
-		});
+		ga('send', 'pageview');
 	</script>
 	<meta charset="UTF-8">
 	<title>ZAUI GA TEST SITE</title>
@@ -50,5 +36,3 @@
 		(document, 'script', 'zaui-embed-src', 'http://seymour.zaui.com/dhaynes/zauitour//themes/default/modules/webBooking/js/embed.js');</script>
 </body>
 </html>
-2.187238639.618702279.1531516832-529573478.1531516832
-						     1.3.529573478.1531516832
