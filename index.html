@@ -16,9 +16,9 @@
 		ga('send', 'pageview');
 	</script>
 	<script type="text/javascript">
-		var destinationLink = document.getElementById('#zaui-embed-modal-iframe');
+		var destinationLink = document.getElementById('#zaui-embed-modal');
 		destinationLink.addEventListener('click', function() {
-			ga('linker:decorate', destinationLink);
+			ga('linker:decorate', '#zaui-embed-modal-iframe');
 		});
 	</script>
 	<meta charset="UTF-8">
