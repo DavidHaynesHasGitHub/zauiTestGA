@@ -22,14 +22,7 @@
 	<a href="http://seymour.zaui.com/dhaynes/zauitour//data/portals/test/index.php" onclick="return Zaui.open(event)" class="zaui-embed-button override">link me</a>
 		<script>
 			(function(d,t,i,u,z,s) {
-				ga(function(tracker) {
-				  // Gets the client ID of the default tracker.
-				  var clientId = tracker.get('clientId');
-				  // Gets a reference to the window object of the destionation iframe.
-				  var frameWindow = document.getElementById('zaui-embed-modal-iframe').contentWindow;
-				  // Sends the client ID to the window inside the destination frame.
-				  frameWindow.postMessage(clientId, 'http://seymour.zaui.com/dhaynes/zauitour//data/portals/test/index.php?&embed=1');
-				});
+
 				
 				if (!d.getElementById(i)) {
 					z = d.createElement(t); 
@@ -41,6 +34,15 @@
 					}
 				}
 			)
-		(document, 'script', 'zaui-embed-src', 'http://seymour.zaui.com/dhaynes/zauitour//themes/default/modules/webBooking/js/embed.js');</script>
+		(document, 'script', 'zaui-embed-src', 'http://seymour.zaui.com/dhaynes/zauitour//themes/default/modules/webBooking/js/embed.js');
+		ga(function(tracker) {
+		  // Gets the client ID of the default tracker.
+		  var clientId = tracker.get('clientId');
+		  // Gets a reference to the window object of the destionation iframe.
+		  var frameWindow = document.getElementById('zaui-embed-modal-iframe').contentWindow;
+		  // Sends the client ID to the window inside the destination frame.
+		  frameWindow.postMessage(clientId, 'http://seymour.zaui.com/dhaynes/zauitour//data/portals/test/index.php?&embed=1');
+		});
+	</script>
 </body>
 </html>
