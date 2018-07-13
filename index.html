@@ -11,7 +11,9 @@
 		ga('require', 'linker');
 		ga('linker:autoLink', ['https://davidhayneshasgithub.github.io/zauiTestGA/','http://seymour.zaui.com/dhaynes/zauitour//data/portals/test/index.php'] );
 		ga(function(tracker) {
-		  alert(tracker.get('linkerParam'));
+		  var clientId = tracker.get('clientId');
+		  var frameWindow = document.getElementById('#zaui-embed-modal-iframe').contentWindow;
+		  frameWindow.postMessage(clientId, 'http://seymour.zaui.com/dhaynes/zauitour//data/portals/test/index.php?');
 		});
 		ga('require', 'displayfeatures');
 		ga('send', 'pageview');
