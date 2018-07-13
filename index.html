@@ -14,15 +14,38 @@
 		});
 		ga('linker:autoLink', ['https://davidhayneshasgithub.github.io/zauiTestGA/','http://seymour.zaui.com/dhaynes/zauitour//data/portals/test/index.php'] );
 		ga('require', 'displayfeatures');
-		ga(function(tracker) {
-		  var clientId = tracker.get('clientId');
-		});
 		ga('send', 'pageview');
+	</script>
+	<script type="text/javascript">
+		function() {
+		  return function() {
+		    try { 
+		      var gobj = window[window.GoogleAnalyticsObject];
+		      var iframe = document.querySelector('#i');
+		      var tracker, linker;
+		      if (gobj) {
+		        tracker = gobj.getAll()[0];
+		        linker = new window.gaplugins.Linker(tracker);
+		        i.src = linker.decorate(i.src);
+		      }
+		    } catch(e) {}
+		  }
+		}
 	</script>
 	<meta charset="UTF-8">
 	<title>ZAUI GA TEST SITE</title>
 </head>
 <body>
-	<a href='http://seymour.zaui.com/dhaynes/zauitour//data/portals/test/index.php?' + linkerParam; onclick='return Zaui.open(event)' class="zaui-embed-button override">link me</a><script>(function(d,t,i,u,z,s) {if (!d.getElementById(i)) {z = d.createElement(t); z.id=i; z.async=1; z.src = u;s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(z, s);}})(document, 'script', 'zaui-embed-src', 'http://seymour.zaui.com/dhaynes/zauitour//themes/default/modules/webBooking/js/embed.js');</script>
+	<a href='http://seymour.zaui.com/dhaynes/zauitour//data/portals/test/index.php?'; onclick='return Zaui.open(event)' class="zaui-embed-button override">link me</a><script>(function(d,t,i,u,z,s) {if (!d.getElementById(i)) {z = d.createElement(t); z.id=i; z.async=1; z.src = u;s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(z, s);}})(document, 'script', 'zaui-embed-src', 'http://seymour.zaui.com/dhaynes/zauitour//themes/default/modules/webBooking/js/embed.js');</script>
 </body>
 </html>
+
+
+GA1.3.1832461555.1531512850
+
+GA1.2.110137117.1531512886
+
+110137117.1531512886
+
+GA1.3.1444114656.1531513040
+	  1444114656.1531513040
