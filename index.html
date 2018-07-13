@@ -14,10 +14,7 @@
 		});
 		ga('linker:autoLink', ['https://davidhayneshasgithub.github.io/zauiTestGA/','http://seymour.zaui.com/dhaynes/zauitour//data/portals/test/index.php'] );
 		ga('require', 'displayfeatures');
-		ga('send', 'pageview');
-	</script>
-	<script type="text/javascript">
-		function() {
+		ga('send', 'pageview', {'hitCallback': function() {
 		  return function() {
 		    try { 
 		      var gobj = window[window.GoogleAnalyticsObject];
@@ -30,7 +27,7 @@
 		      }
 		    } catch(e) {}
 		  }
-		}
+		}});
 	</script>
 	<meta charset="UTF-8">
 	<title>ZAUI GA TEST SITE</title>
