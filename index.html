@@ -15,12 +15,7 @@
 		ga('require', 'displayfeatures');
 		ga('send', 'pageview');
 	</script>
-	<script type="text/javascript">
-		var destinationLink = document.getElementById('#zaui-embed-modal');
-		destinationLink.addEventListener('click', function() {
-			ga('linker:decorate', '#zaui-embed-modal-iframe');
-		});
-	</script>
+
 	<meta charset="UTF-8">
 	<title>ZAUI GA TEST SITE</title>
 </head>
@@ -40,5 +35,11 @@
 				}
 			)
 		(document, 'script', 'zaui-embed-src', 'http://seymour.zaui.com/dhaynes/zauitour//themes/default/modules/webBooking/js/embed.js');</script>
+			<script type="text/javascript">
+				var destinationLink = document.getElementById('#zaui-embed-modal');
+				destinationLink.addEventListener('click', function() {
+					ga('linker:decorate', '#zaui-embed-modal-iframe');
+				});
+			</script>
 </body>
 </html>
