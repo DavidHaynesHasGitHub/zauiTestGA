@@ -11,29 +11,18 @@
 		ga('require', 'linker');
 		ga('linker:autoLink', ['https://davidhayneshasgithub.github.io/zauiTestGA/','http://seymour.zaui.com/dhaynes/zauitour//data/portals/test/index.php'] );
 		ga('require', 'displayfeatures');
+		ga(function(tracker) {
+		  var clientId = tracker.get('clientId');
+		});
 		ga('send', 'pageview');
 	</script>
 	<meta charset="UTF-8">
 	<title>ZAUI GA TEST SITE</title>
-	<script>
-		function getLinkerParam(uaNumber) {
-		  var _ga = window[window.GoogleAnalyticsObject];
-		  var trackers = _ga.getAll();
-		  var i;
-		  for (i = 0; i < trackers.length; i++) {
-		    var _tracker = trackers[i];
-		    if (!uaNumber || _tracker.get('trackingId') === uaNumber) {
-		      return _tracker.get('linkerParam');
-		    }
-		  }
-		}
-	</script>
-	<script>
-		iframe.src = 'http://seymour.zaui.com/dhaynes/zauitour//data/portals/test/index.php' + '?' + linkerParam;
-		document.getElementById('iframe-holder').appendChild(iframe);
-	</script>
 </head>
 <body>
-	<a href='http://seymour.zaui.com/dhaynes/zauitour//data/portals/test/index.php' onclick="var linkerParam = getLinkerParam(); return Zaui.open(event)" class="zaui-embed-button override">link me</a><script>(function(d,t,i,u,z,s) {if (!d.getElementById(i)) {z = d.createElement(t); z.id=i; z.async=1; z.src = u;s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(z, s);}})(document, 'script', 'zaui-embed-src', 'http://seymour.zaui.com/dhaynes/zauitour//themes/default/modules/webBooking/js/embed.js');</script>
+	<a href='http://seymour.zaui.com/dhaynes/zauitour//data/portals/test/index.php?' + clientId=clientId ; return Zaui.open(event)" class="zaui-embed-button override">link me</a><script>(function(d,t,i,u,z,s) {if (!d.getElementById(i)) {z = d.createElement(t); z.id=i; z.async=1; z.src = u;s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(z, s);}})(document, 'script', 'zaui-embed-src', 'http://seymour.zaui.com/dhaynes/zauitour//themes/default/modules/webBooking/js/embed.js');</script>
 </body>
 </html>
+
+687932844.1531508018
+687932844.1531508018
