@@ -9,7 +9,7 @@
 
 		ga('create', 'UA-119023979-1', 'auto', {'allowLinker': true});
 		ga('require', 'linker');
-		ga('linker:autoLink', ['https://davidhayneshasgithub.github.io/zauiTestGA/','http://seymour.zaui.com/dhaynes/zauitour//data/portals/test/index.php'] );
+		ga('linker:autoLink', ['https://davidhayneshasgithub.github.io/zauiTestGA/','http://seymour.zaui.com/dhaynes/zauitour//data/portals/GATest/'] );
 		ga('require', 'displayfeatures');
 		ga('send', 'pageview');
 	</script>
@@ -18,41 +18,24 @@
 	<title>ZAUI GA TEST SITE</title>
 </head>
 <body>
-	<a href="http://seymour.zaui.com/dhaynes/zauitour//data/portals/test/index.php" onclick="return Zaui.open(event)" class="zaui-embed-button override">link me</a>
-		<script>
-			(function(d,t,i,u,z,s) {
-				
-				if (!d.getElementById(i)) {
-					z = d.createElement(t); 
-					z.id=i; 
-					z.async=1; 
-					z.src = u;
-					s = d.getElementsByTagName(t)[0]; 
-					s.parentNode.insertBefore(z, s);
-					}
+	<a href="http://seymour.zaui.com/dhaynes/zauitour//data/portals/GATest/index.php" onclick="return Zaui.open(event)" class="zaui-embed-button override">Link Me</a>
+	<script>
+		(function(d,t,i,u,z,s) {
+			if (!d.getElementById(i)) {
+				z = d.createElement(t); 
+				z.id=i; z.async=1; 
+				z.src = u;
+				s = d.getElementsByTagName(t)[0]; 
+				s.parentNode.insertBefore(z, s);
 				}
-			)
-		(document, 'script', 'zaui-embed-src', 'http://seymour.zaui.com/dhaynes/zauitour//themes/default/modules/webBooking/js/embed.js');</script>
-		<script>
-			function onSubmitForm(){
-
-				var clientId;
-
-			 	ga(function(tracker) {
-		    		clientId = tracker.get('clientId');
-		  		});
-		  		console.log('test', clientId);
-
-		  		var url = ('http://seymour.zaui.com/dhaynes/zauitour//data/portals/test/?clientId=' + clientId);
-		  		document.ZauiLink.action = url;
 			}
-		
-		</script>
+		)
+		(document, 'script', 'zaui-embed-src', 'http://seymour.zaui.com/dhaynes/zauitour//themes/default/modules/webBooking/js/embed.js');
+	</script>
 	<form name="ZauiLink" onsubmit="return onSubmitForm()">
 		<input type="submit" value="Click Me">	
 	</form>
 	
 </body>
 </html>
-
 
