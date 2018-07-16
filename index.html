@@ -33,5 +33,26 @@
 				}
 			)
 		(document, 'script', 'zaui-embed-src', 'http://seymour.zaui.com/dhaynes/zauitour//themes/default/modules/webBooking/js/embed.js');</script>
+		<script>
+			function onSubmitForm(){
+
+				var clientId;
+
+			 	ga(function(tracker) {
+		    		clientId = tracker.get('clientId');
+		  		});
+		  		console.log('test', clientId);
+
+		  		var url = ('http://seymour.zaui.com/dhaynes/zauitour//data/portals/test/ + ?clientId=' + clientId);
+		  		document.ZauiLink.action = url;
+			}
+		
+		</script>
+	<form name="ZauiLink" onsubmit="return onSubmitForm()">
+		<input type="submit" value="Click Me">	
+	</form>
+	
 </body>
 </html>
+
+
