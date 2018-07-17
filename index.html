@@ -43,7 +43,7 @@
 	  		});
 	  		console.log('test', clientId);
 
-	  		var url = 'http://seymour.zaui.com/dhaynes/zauitour//data/portals/test/?clientId=' + clientId;
+	  		var url = 'http://seymour.zaui.com/dhaynes/zauitour//data/portals/GAtest/?clientId=' + clientId;
 	  		document.ZauiLink.action = url;
 		}
 
@@ -57,14 +57,14 @@
 	<script>
 	function onSubmitForm2(){
 
-		var clientId;
+		var clientId2;
 
 	 	ga(function(tracker) {
-    		clientId = tracker.get('clientId');
+    		clientId2 = tracker.get('clientId');
   		});
-  		console.log('test', clientId);
+  		console.log('test', clientId2);
 
-  		var url = 'https://support.zaui.net/data/portals/GATest/index.php/?clientId=' + clientId;
+  		var url = 'https://support.zaui.net/data/portals/GATest/index.php/?clientId=' + clientId2;
   		document.ZauiLink2.action = url;
 	}
 	</script>
