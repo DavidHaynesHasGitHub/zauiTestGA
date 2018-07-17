@@ -19,7 +19,7 @@
 </head>
 <body>
 
-	<a href="http://seymour.zaui.com/dhaynes/zauitour//data/portals/GATest/index.php" onclick="return Zaui.open(event)" class="zaui-embed-button override">Link Me</a>
+	<a href="https://seymour.zaui.com/dhaynes/zauitour//data/portals/GATest/index.php" onclick="return Zaui.open(event)" class="zaui-embed-button override">Link Me</a>
 	<script>
 		(function(d,t,i,u,z,s) {
 			if (!d.getElementById(i)) {
@@ -31,7 +31,7 @@
 				}
 			}
 		)
-		(document, 'script', 'zaui-embed-src', 'http://seymour.zaui.com/dhaynes/zauitour//themes/default/modules/webBooking/js/embed.js');
+		(document, 'script', 'zaui-embed-src', 'https://seymour.zaui.com/dhaynes/zauitour//themes/default/modules/webBooking/js/embed.js');
 	</script>
 	<script>
 		function onSubmitForm(){
@@ -43,7 +43,7 @@
 	  		});
 	  		console.log('test', clientId);
 
-	  		var url = 'http://seymour.zaui.com/dhaynes/zauitour//data/portals/test/?clientId=' + clientId;
+	  		var url = 'https://seymour.zaui.com/dhaynes/zauitour//data/portals/test/?clientId=' + clientId;
 	  		document.ZauiLink.action = url;
 		}
 
@@ -65,10 +65,12 @@
   		console.log('test', clientId);
 
   		var url = 'https://support.zaui.net/data/portals/GATest/index.php/?clientId=' + clientId;
-  		document.ZauiLink.action = url;
+  		document.ZauiLink2.action = url;
 	}
-
 	</script>
+		<form name="ZauiLink2" onsubmit="return onSubmitForm()">
+		<input type="submit" value="Support Click Me">	
+	</form>
 	
 </body>
 </html>
