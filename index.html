@@ -47,6 +47,27 @@
 		<input type="submit" value="Click Me">	
 	</form>	
 
+
+		<script>
+		function onSubmitForm2(){
+
+			var clientId;
+
+		 	ga(function(tracker) {
+	    		clientId = tracker.get('clientId');
+	  		});
+	  		console.log('test', clientId);
+
+	  		var url = 'https://athenswalkingtours.zaui.net/modules/webBooking/index.php/?clientId=' + clientId;
+	  		document.ZauiLink.action = url;
+		}
+
+	</script>
+	<h3> Then do the same with the button</h3>
+	<form name="ZauiLink" onsubmit="return onSubmitForm2()">
+		<input type="submit" value="Click Me">	
+	</form>	
+
 	<h3>This is so I can make sur ethe GA code I have been working on is tracking properly on both iFrames and in a seperate tab as well as tracking user interacitons properly</h3>
 	<h1>Thanks</h1>
 	<h6>isnt this page beautiful! sorry Mika but i think we can see who is the better designer in the office</h6>
