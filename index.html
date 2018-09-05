@@ -9,28 +9,20 @@
 
 		ga('create', 'UA-119023979-1', 'auto', {'allowLinker': true});
 		ga('require', 'linker');
-		ga('linker:autoLink', ['https://davidhayneshasgithub.github.io/zauiTestGA/','http://seymour.zaui.com/dhaynes/zauitour//data/portals/GATest/index.php'] );
+		ga('linker:autoLink', ['https://davidhayneshasgithub.github.io/zauiTestGA/','https://support.zaui.net/data/portals/GATest/index.php'] );
 		ga('require', 'displayfeatures');
 		ga('send', 'pageview');
 	</script>
 
 	<meta charset="UTF-8">
-	<title>DAVIDS JANKY GOOGLE ANALYTICS TEST SITE</title>
+	<title>Zaui Demo Analytics iFrame Site</title>
 </head>
 <body>
 
-	<h1> Welcome to Davids beautiful Google Analytics Test Site</h1>
-	<h3> Please click the iframe link and explore the portal, click some stuff, add and remove things from the cart and do transaction</h3>
+	<h1>A basic page with an iFrame embedded button to demonstrate how it is best configured</h1>
+
+	<a href="https://support.zaui.net/data/portals/GATest/index.php" onclick="return Zaui.open(event)" class="zaui-embed-button override">click me</a><script>(function(d,t,i,u,z,s) {if (!d.getElementById(i)) {z = d.createElement(t); z.id=i; z.async=1; z.src = u;s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(z, s);}})(document, 'script', 'zaui-embed-src', 'https://support.zaui.net/themes/default/modules/webBooking/js/embed.js');</script>
 
 
-<a href="https://support.zaui.net/data/portals/GATest/index.php" onclick="return Zaui.open(event)" class="zaui-embed-button override">click me</a><script>(function(d,t,i,u,z,s) {if (!d.getElementById(i)) {z = d.createElement(t); z.id=i; z.async=1; z.src = u;s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(z, s);}})(document, 'script', 'zaui-embed-src', 'https://support.zaui.net/themes/default/modules/webBooking/js/embed.js');</script>
-
-<a href="http://seymour.zaui.com/dhaynes/zauitour//data/portals/GATest/index.php" onclick="return Zaui.open(event)" class="zaui-embed-button override">click me</a><script>(function(d,t,i,u,z,s) {if (!d.getElementById(i)) {z = d.createElement(t); z.id=i; z.async=1; z.src = u;s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(z, s);}})(document, 'script', 'zaui-embed-src', 'http://seymour.zaui.com/dhaynes/zauitour//themes/default/modules/webBooking/js/embed.js');</script>
-
-	
-
-	<h3>This is so I can make sur ethe GA code I have been working on is tracking properly on both iFrames and in a seperate tab as well as tracking user interacitons properly</h3>
-	<h1>Thanks</h1>
-	<h6>isnt this page beautiful! sorry Mika but i think we can see who is the better designer in the office</h6>
 </body>
 </html>
