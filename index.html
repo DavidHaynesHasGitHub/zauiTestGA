@@ -7,7 +7,19 @@
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-		ga('create', 'UA-119023979-1', 'auto', {'allowLinker': true});
+		// Function to dynamically get the client Id from the URL if it is already set
+		function getClientIdFromUrl() {
+		    var url = window.location.href;
+		    var regex = new RegExp("[?&]clientId(=([^&#]*)|&|#|$)"),
+		        results = regex.exec(url);
+		        console.log('this is bullshit', results)
+		    if (!results) return null;
+		    if (!results[2]) return '';
+		    return decodeURIComponent(results[2].replace(/\+/g, " "));
+		    console.log(results)
+		}
+
+		ga('create', "{V_GOOGLETRACKINGCODE}", 'auto', {'clientId': getClientIdFromUrl()}, {'allowLinker': true});
 		ga('require', 'linker');
 		ga('linker:autoLink', ['https://davidhayneshasgithub.github.io/zauiTestGA/','https://support.zaui.net/data/portals/GATest/index.php'] );
 		ga('require', 'displayfeatures');
