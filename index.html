@@ -9,7 +9,7 @@
 
 		ga('create', 'UA-119023979-1', 'auto', {'allowLinker': true});
 		ga('require', 'linker');
-		ga('linker:autoLink', ['https://davidhayneshasgithub.github.io/zauiTestGA/','https://support.zaui.net/data/portals/GATest/index.php'] );
+		ga('linker:autoLink', ['https://davidhayneshasgithub.github.io/zauiTestGA/','http://seymour.zaui.com/dhaynes/zauitour//data/portals/GATest/index.php'] );
 		ga('require', 'displayfeatures');
 		ga('send', 'pageview');
 	</script>
@@ -25,49 +25,9 @@
 
 <a href="https://support.zaui.net/data/portals/GATest/index.php" onclick="return Zaui.open(event)" class="zaui-embed-button override">click me</a><script>(function(d,t,i,u,z,s) {if (!d.getElementById(i)) {z = d.createElement(t); z.id=i; z.async=1; z.src = u;s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(z, s);}})(document, 'script', 'zaui-embed-src', 'https://support.zaui.net/themes/default/modules/webBooking/js/embed.js');</script>
 
-<a href="https://athenswalkingtours.zaui.net/modules/webBooking/index.php" onclick="return Zaui.open(event)" class="zaui-embed-button override">David @ Zaui Test</a><script>(function(d,t,i,u,z,s) {if (!d.getElementById(i)) {z = d.createElement(t); z.id=i; z.async=1; z.src = u;s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(z, s);}})(document, 'script', 'zaui-embed-src', 'https://athenswalkingtours.zaui.net/themes/default/modules/webBooking/js/embed.js');</script>
+<a href="http://seymour.zaui.com/dhaynes/zauitour//data/portals/GATest/index.php" onclick="return Zaui.open(event)" class="zaui-embed-button override">click me</a><script>(function(d,t,i,u,z,s) {if (!d.getElementById(i)) {z = d.createElement(t); z.id=i; z.async=1; z.src = u;s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(z, s);}})(document, 'script', 'zaui-embed-src', 'http://seymour.zaui.com/dhaynes/zauitour//themes/default/modules/webBooking/js/embed.js');</script>
 
-
-	<script>
-		function onSubmitForm(){
-
-			var clientId;
-
-		 	ga(function(tracker) {
-	    		clientId = tracker.get('clientId');
-	  		});
-	  		console.log('test', clientId);
-
-	  		var url = 'https://support.zaui.net/data/portals/GATest/index.php/?clientId=' + clientId;
-	  		document.ZauiLink.action = url;
-		}
-
-	</script>
-	<h3> Then do the same with the button</h3>
-	<form name="ZauiLink" onsubmit="return onSubmitForm()">
-		<input type="submit" value="Click Me">	
-	</form>	
-
-
-		<script>
-		function onSubmitForm2(){
-
-			var clientId;
-
-		 	ga(function(tracker) {
-	    		clientId = tracker.get('clientId');
-	  		});
-	  		console.log('test', clientId);
-
-	  		var url = 'https://athenswalkingtours.zaui.net/modules/webBooking/index.php/?clientId=' + clientId;
-	  		document.ZauiLink.action = url;
-		}
-
-	</script>
-	<h3> Then do the same with the button</h3>
-	<form name="ZauiLink2" onsubmit="return onSubmitForm2()">
-		<input type="submit" value="Click Me">	
-	</form>	
+	
 
 	<h3>This is so I can make sur ethe GA code I have been working on is tracking properly on both iFrames and in a seperate tab as well as tracking user interacitons properly</h3>
 	<h1>Thanks</h1>
