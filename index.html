@@ -11,8 +11,6 @@ function getClientIdFromUrl() {
     var url = window.location.href;
     var regex = new RegExp("[?&]clientId(=([^&#]*)|&|#|$)"),
         results = regex.exec(url);
-        console.log('this is total bullshit', url)
-        console.log('this is bullshit', results)
     if (!results) return null;
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
