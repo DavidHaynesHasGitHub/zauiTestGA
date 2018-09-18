@@ -23,6 +23,31 @@
 		ga('require', 'displayfeatures');
 		ga('send', 'pageview');
 	</script>
+	<script>
+	//declares the variable
+	var clientId
+
+	if (typeof ga === "function") { 
+	//sets the client id variable to the GA tracker from the cookies if it is set
+	  ga(function(tracker) {
+	    clientId = tracker.get('clientId');
+	  });
+	}
+	var getClientId = function(){	
+	 //adds a clientId URI parameter if the clientId isnt null
+	  if(clientId != null){
+	    var urlOptions = function(url) {
+	    	return 'http://seymour.zaui.com/dhaynes/zauitourclean/modules/webBooking/index.php?clientId=' + clientId;
+	    } 
+	  }else{
+	    //dont add the clientId parameter
+	    var urlOptions = function(url) {
+	    return 'http://seymour.zaui.com/dhaynes/zauitourclean/modules/webBooking/index.php';
+	    }
+	  }
+	}
+	</script>
+</head>
 
 	<meta charset="UTF-8">
 	<title>Zaui Demo Analytics iFrame Site</title>
