@@ -37,12 +37,12 @@
 	 //adds a clientId URI parameter if the clientId isnt null
 	  if(clientId != null){
 	    var urlOptions = function(url) {
-	    	return 'http://seymour.zaui.com/dhaynes/zauitourclean/modules/webBooking/index.php?clientId=' + clientId;
+	    	window.location.replace('http://seymour.zaui.com/dhaynes/zauitourclean/modules/webBooking/index.php?clientId=' + clientId);
 	    } 
 	  }else{
 	    //dont add the clientId parameter
 	    var urlOptions = function(url) {
-	    return 'http://seymour.zaui.com/dhaynes/zauitourclean/modules/webBooking/index.php';
+	    window.location.replace('http://seymour.zaui.com/dhaynes/zauitourclean/modules/webBooking/index.php');
 	    }
 	  }
 	}
