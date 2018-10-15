@@ -27,18 +27,18 @@
 	//declares the variable
 	var clientId
 
-	if (typeof ga === "function") { 
+	if (typeof ga === "function") {
 	//sets the client id variable to the GA tracker from the cookies if it is set
 	  ga(function(tracker) {
 	    clientId = tracker.get('clientId');
 	  });
 	}
-	var getClientId = function(){	
+	var getClientId = function(){
 	 //adds a clientId URI parameter if the clientId isnt null
 	  if(clientId != null){
 	    var urlOptions = function(url) {
 	    	window.location.replace('http://seymour.zaui.com/dhaynes/zauitourclean/modules/webBooking/index.php?clientId=' + clientId);
-	    } 
+	    }
 	  }else{
 	    //dont add the clientId parameter
 	    var urlOptions = function(url) {
@@ -55,12 +55,11 @@
 <body>
 
 	<h1>A basic page with an iFrame embedded button to demonstrate how it is best configured</h1>
+<a href="http://seymour.zaui.com/dhaynes/zauitour/data/portals/GATest/index.php" onclick="return Zaui.open(event)" class="zaui-embed-button override">book now</a><script>(function(d,t,i,u,z,s) {if (!d.getElementById(i)) {z = d.createElement(t); z.id=i; z.async=1; z.src = u;s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(z, s);}})(document, 'script', 'zaui-embed-src', 'http://seymour.zaui.com/dhaynes/zauitour/themes/default/modules/webBooking/js/embed.js');</script>
 
-	<a href="http://seymour.zaui.com/dhaynes/zauitourclean/modules/webBooking/index.php" onclick="return Zaui.open(event)" class="zaui-embed-button override">click me</a><script>(function(d,t,i,u,z,s) {if (!d.getElementById(i)) {z = d.createElement(t); z.id=i; z.async=1; z.src = u;s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(z, s);}})(document, 'script', 'zaui-embed-src', 'http://seymour.zaui.com/dhaynes/zauitourclean/themes/default/modules/webBooking/js/embed.js');</script>
-	
 	<h1>A deep link button to a test booking portal</h1>
-	<form method="get" action="#" onsubmit="getClientId()">
-   		<button type="submit" onClick="getClientId()">Click Me</button>
+	<form method="get" action="http://seymour.zaui.com/dhaynes/zauitour/data/portals/GATest/">
+   		<button type="submit">Click Me</button>
 	</form>
 
 </body>
