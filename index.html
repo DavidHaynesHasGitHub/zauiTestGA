@@ -24,6 +24,17 @@
 		ga('send', 'pageview');
 	</script>
 
+
+<script type="text/javascript">
+
+	ga(function(tracker) {
+  		var clientId = tracker.get('clientId');
+  	});
+    document.getElementById("myButton").onclick = function () {
+        location.href = this.href + "clientId=" + clientId;
+    };
+</script>
+
 </head>
 
 	<meta charset="UTF-8">
@@ -43,6 +54,9 @@
 	<a href="http://seymour.zaui.com/dhaynes/zauitour/data/portals/GATest/index.php" onclick="return Zaui.open(event)" class="zaui-embed-button override">book now</a><script>(function(d,t,i,u,z,s) {if (!d.getElementById(i)) {z = d.createElement(t); z.id=i; z.async=1; z.src = u;s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(z, s);}})(document, 'script', 'zaui-embed-src', 'http://seymour.zaui.com/dhaynes/zauitour/themes/default/modules/webBooking/js/embed.js');</script>
 
 		<h1>A deep link button to a test booking portal</h1>
+
+		<button id="myButton" class="float-left submit-button" >Book Now</button>
+
 	<form method="get" action="http://seymour.zaui.com/dhaynes/zauitour/data/portals/GATest/index.php">
    		<button type="submit">Click Me</button>
 	</form>
