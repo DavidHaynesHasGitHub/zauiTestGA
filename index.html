@@ -26,13 +26,14 @@
 
 
 <script type="text/javascript">
-
+$(document).ready(function() {
 	ga(function(tracker) {
   		var clientId = tracker.get('clientId');
   	});
-    document.getElementById("myButton").onclick = function () {
+    $("#myButton").onclick = function () {
         location.href = this.href + "clientId=" + clientId;
     };
+ })
 </script>
 
 </head>
