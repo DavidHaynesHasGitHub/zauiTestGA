@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+
+	<meta charset="UTF-8">
+	<title>Zaui Demo Analytics iFrame Site</title>
+</head>
+<body>
+
+<h1>Book Now iFrame</h1>
+
+<a href="https://pachena.zaui.com/leo/zauitour/modules/webBooking/index.php" onclick="return Zaui.open(event)" class="zaui-embed-button override">Book Now</a><script>(function(d,t,i,u,z,s) {if (!d.getElementById(i)) {z = d.createElement(t); z.id=i; z.async=1; z.src = u + "?v=" + Math.floor(Date.now() / 1000);s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(z, s);}})(document, 'script', 'zaui-embed-src', 'https://pachena.zaui.com/leo/zauitour/themes/default/modules/webBooking/js/embed.js');</script>
+
+
+</body>
+
+<footer>
+
+</footer>
+</html>
